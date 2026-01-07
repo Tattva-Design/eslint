@@ -39,10 +39,6 @@ const rules = {
   'import/extensions': 'off',
   'import/no-unresolved': 'off',
   'no-console': 'error',
-  'no-underscore-dangle': [
-    'error',
-    { allow: ['__successMessage', '__errorMessage'] },
-  ],
   'max-len': ['error', { code: 130 }],
 };
 
