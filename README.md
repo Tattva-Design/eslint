@@ -1,10 +1,10 @@
-# tatva-design/eslint
+# @tattva-design/eslint
 
 Opinionated, practical ESLint standards for modern JavaScript and TypeScript teams.
 
 This repository contains a set of shared ESLint configurations and rules used to maintain consistent code quality, readability, and best practices across projects.
 
-> Note: This project is **not affiliated with ESLint.org**. It is an independent, community-driven configuration maintained by Tatva Design.
+> Note: This project is **not affiliated with ESLint.org**. It is an independent, community-driven configuration maintained by Tattva Design.
 
 ---
 
@@ -24,13 +24,13 @@ This package provides a well-curated baseline so teams can focus on building ins
 
 - A base ESLint configuration for JavaScript and TypeScript projects
 - Sensible defaults for:
-    - Readability
-    - Maintainability
-    - Bug prevention
+  - Readability
+  - Maintainability
+  - Bug prevention
 - Optional presets for:
-    - React / Next.js
-    - Node.js
-    - TypeScript
+  - React / Next.js
+  - Node.js
+  - TypeScript
 
 You can extend or override anything.
 
@@ -41,49 +41,31 @@ You can extend or override anything.
 ### Step 1 — Install dependencies
 
 ```bash
-npm install -D eslint @tatva-design/eslint
+npm install -D eslint @tattva-design/eslint
 ```
 
 or
 
 ```bash
-yarn add -D eslint @tatva-design/eslint
+yarn add -D eslint @tattva-design/eslint
 ```
 
 ---
 
-### Step 2 — Create `.eslintrc.js`
+### Step 2 — Create `eslint.config.js`
 
 Base config:
 
 ```js
-module.exports = {
-  extends: ['@tatva-design/eslint'],
-};
+const tattvaEslint = require('@tattva-design/eslint');
+module.exports = [...tattvaEslint];
 ```
 
-ESM config (for `eslint.config.mjs` or ESM projects):
+ESM config (for `eslint.config.js` or ESM projects):
 
 ```js
-import config from '@tatva-design/eslint';
-
-export default config;
-```
-
----
-
-## Customization
-
-Override or add rules locally:
-
-```js
-module.exports = {
-  extends: ['@tatva-design/eslint'],
-  rules: {
-    'no-console': 'warn',
-    eqeqeq: ['error', 'always'],
-  },
-};
+import tattvaEslint from '@tattva-design/eslint';
+export default tattvaEslint;
 ```
 
 ---
@@ -120,7 +102,7 @@ This package supports both CommonJS and ESM:
 
 MIT License
 
-Copyright (c) Tatva Design
+Copyright (c) Tattva Design
 
 ---
 
@@ -128,4 +110,4 @@ Copyright (c) Tatva Design
 
 Open an issue or start a discussion.
 
-Maintained by Tatva Design.
+Maintained by Tattva Design.
