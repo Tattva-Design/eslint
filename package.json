@@ -1,5 +1,5 @@
 {
-  "name": "eslint",
+  "name": "@tattva-design/eslint",
   "version": "1.0.0",
   "description": "Shared ESLint configuration (Airbnb + React + TypeScript)",
   "main": "./src/index.cjs",
