@@ -5,6 +5,10 @@
   "main": "./src/index.cjs",
   "module": "./src/index.mjs",
   "type": "commonjs",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
   "exports": {
     ".": {
       "require": "./src/index.cjs",
