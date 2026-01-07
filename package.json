@@ -1,14 +1,10 @@
 {
   "name": "@tattva-design/eslint",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Shared ESLint configuration (Airbnb + React + TypeScript)",
   "main": "./src/index.cjs",
   "module": "./src/index.mjs",
   "type": "commonjs",
-  "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  },
   "exports": {
     ".": {
       "require": "./src/index.cjs",
@@ -24,7 +20,8 @@
     "eslint-config",
     "airbnb",
     "typescript",
-    "react"
+    "react",
+    "next.js"
   ],
   "author": "Dinesh Dabhi",
   "license": "MIT",

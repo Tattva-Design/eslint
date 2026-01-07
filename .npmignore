@@ -1,0 +1,6 @@
+examples
+.idea
+eslint.config.js
+.github
+.nvmrc
+*.tgz
