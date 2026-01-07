@@ -5,7 +5,6 @@ import { FlatCompat } from '@eslint/eslintrc';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const require = createRequire(import.meta.url);
 
-/* eslint-disable import/no-unresolved */
 const typescriptEslintParser = require('@typescript-eslint/parser');
 const typescriptEslintPlugin = require('@typescript-eslint/eslint-plugin');
 const reactPlugin = require('eslint-plugin-react');

@@ -1,3 +1,6 @@
 const tattvaEslint = require('./src/index.cjs');
 
-module.exports = [...tattvaEslint];
+module.exports = [
+    ...tattvaEslint,
+    { ignores: ['examples/**'] },
+];
