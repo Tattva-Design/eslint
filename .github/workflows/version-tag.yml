@@ -1,0 +1,57 @@
+name: Auto Bump + Tag from package.json
+
+on:
+  pull_request:
+    types:
+      - closed
+
+permissions:
+  contents: write
+
+jobs:
+  bump_and_tag:
+    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'master'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Read current version
+        id: current
+        run: |
+          VERSION=$(jq -r '.version' package.json)
+          echo "CURRENT_VERSION=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Calculate next version
+        id: bump
+        run: |
+          OLD="${{ steps.current.outputs.CURRENT_VERSION }}"
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$OLD"
+          NEW="$MAJOR.$((MINOR + 1)).0"
+          echo "NEW_VERSION=$NEW" >> $GITHUB_OUTPUT
+          echo "Bumping version: $OLD → $NEW"
+
+      - name: Update package.json
+        run: |
+          jq ".version = \"${{ steps.bump.outputs.NEW_VERSION }}\"" package.json > temp.json
+          mv temp.json package.json
+
+      - name: Commit and push version bump
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add package.json
+          git commit -m "Auto bump version to ${{ steps.bump.outputs.NEW_VERSION }}"
+          git push origin master
+
+      - name: Create Git Tag
+        run: |
+          TAG="v${{ steps.bump.outputs.NEW_VERSION }}"
+          git tag $TAG
+          git push origin $TAG

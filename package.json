@@ -1,0 +1,32 @@
+{
+  "name": "eslint",
+  "version": "1.0.0",
+  "description": "Shared ESLint configuration (Airbnb + React + TypeScript)",
+  "main": "index.cjs",
+  "type": "commonjs",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "airbnb",
+    "typescript",
+    "react"
+  ],
+  "author": "Dinesh Dabhi",
+  "license": "MIT",
+  "dependencies": {
+    "@eslint/eslintrc": "^3.0.0",
+    "@eslint/js": "^9.0.0",
+    "eslint": "^8.57.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-config-next": "15.3.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-storybook": "^0.12.0",
+    "@types/node": "^24.10.1",
+    "typescript-eslint": "^8.4.0"
+  }
+}
