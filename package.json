@@ -15,6 +15,10 @@
       "import": "./src/index.mjs"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tattva-Design/eslint.git"
+  },
   "keywords": [
     "eslint",
     "eslint-config",
