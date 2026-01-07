@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "description": "Shared ESLint configuration (Airbnb + React + TypeScript)",
   "main": "index.cjs",
+  "module": "index.mjs",
   "type": "commonjs",
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "import": "./index.mjs"
+    }
+  },
   "keywords": [
     "eslint",
     "eslint-config",

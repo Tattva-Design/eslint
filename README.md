@@ -62,6 +62,14 @@ module.exports = {
 };
 ```
 
+ESM config (for `eslint.config.mjs` or ESM projects):
+
+```js
+import config from '@tatva-design/eslint';
+
+export default config;
+```
+
 ---
 
 ## Customization
@@ -96,6 +104,15 @@ Contributions are welcome.
 - Open an issue for discussion
 - Submit a pull request with rationale
 - Keep changes small and well documented
+
+---
+
+## Module Support
+
+This package supports both CommonJS and ESM:
+
+- In CommonJS projects (most ESLint setups) just install and extend as usual.
+- In ESM projects, ESLint will resolve the ESM config automatically.
 
 ---
 
