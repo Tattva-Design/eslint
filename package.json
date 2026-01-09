@@ -1,6 +1,6 @@
 {
   "name": "@tattva-design/eslint",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "Shared ESLint configuration (Airbnb + React + TypeScript)",
   "main": "./src/index.cjs",
   "module": "./src/index.mjs",
