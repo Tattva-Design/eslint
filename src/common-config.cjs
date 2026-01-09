@@ -1,6 +1,9 @@
 const ignores = { ignores: ['node_modules/**', '.next/**', 'dist/**', 'build/**', 'eslint.config.*'] };
 
-const files = ['**/*.ts', '**/*.tsx'];
+const files = [
+  '**/*.ts',
+  '**/*.tsx',
+];
 
 const reduxSliceIgnoreRules = {
   files: ['**/*slice.ts'],
