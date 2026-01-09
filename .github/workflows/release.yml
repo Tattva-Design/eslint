@@ -36,3 +36,8 @@ jobs:
       - name: Push version commit + tag
         run: |
           git push origin master --follow-tags
+
+      - name: Publish to npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public
