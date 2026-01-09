@@ -5,7 +5,7 @@ const reactPlugin = require('eslint-plugin-react');
 const reactHooksPlugin = require('eslint-plugin-react-hooks');
 const importPlugin = require('eslint-plugin-import');
 
-const { FlatCompat } = require('@eslint/eslintrc');
+const { FlatCompat } = require('@eslint/eslintrc') ;
 const {
   ignores, files, reduxSliceIgnoreRules, languageOptions, rules,
 } = require('./common-config.cjs');
